@@ -1,0 +1,17 @@
+package com.mouritech.springbootsecuritywithroles.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.mouritech.springbootsecuritywithroles.entity.User;
+
+@Repository
+public interface UserRpository extends JpaRepository<User, Long>{
+	
+	Optional<User> findByUserName(String userName);
+
+}
+
+
